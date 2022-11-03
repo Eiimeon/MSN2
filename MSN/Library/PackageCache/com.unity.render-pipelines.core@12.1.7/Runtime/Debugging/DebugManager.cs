@@ -167,10 +167,11 @@ namespace UnityEngine.Rendering
 
         DebugManager()
         {
-#if DEVELOPMENT_BUILD || UNITY_EDITOR
+            if (!Debug.isDebugBuild)
+                return;
+
             RegisterInputs();
             RegisterActions();
-#endif
         }
 
         /// <summary>
