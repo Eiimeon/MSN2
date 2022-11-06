@@ -20,6 +20,7 @@ public class CreatresMove : MonoBehaviour
     public float rotationSpeed = 1;
     public float frequency;
     public float amplitude;
+    public float phase;
     public float speed = 1f;
     public float duration = Mathf.PI;
     public float internalTimer = 0;
@@ -40,7 +41,7 @@ public class CreatresMove : MonoBehaviour
     private void VirusMove()
     {
         internalTimer += Time.deltaTime;
-        if (internalTimer>duration)
+        if (internalTimer > duration)
         {
             internalTimer = 0;
             if (isGoingForward)
@@ -58,11 +59,11 @@ public class CreatresMove : MonoBehaviour
         Debug.Log(speed * direction);
         if (isGoingForward)
         {
-            transform.position += speed * Time.deltaTime * direction + amplitude * Mathf.Sin(frequency * Time.time) * Vector3.up;
+            transform.position += speed * Time.deltaTime * direction + amplitude * Mathf.Sin(frequency * Time.time - phase) * Vector3.up;
         }
         else
         {
-            transform.position += -1 * speed * Time.deltaTime * direction + amplitude * Mathf.Sin(frequency * Time.time) * Vector3.up;
+            transform.position += -1 * speed * Time.deltaTime * direction + amplitude * Mathf.Sin(frequency * Time.time - phase) * Vector3.up;
         }
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, rotationSpeed * Time.time, transform.rotation.eulerAngles.z);
     }

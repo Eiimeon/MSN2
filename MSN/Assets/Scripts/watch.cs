@@ -10,7 +10,7 @@ public class watch : MonoBehaviour
     public Camera cam;
     public GameObject camOverlay;
 
-    // Booléens
+    // Bool?ens
     private bool canWatch = true;
 
     public float forceMultiplier = 100f;
@@ -22,7 +22,7 @@ public class watch : MonoBehaviour
     private bool canDash = true;
     private float dashTimer = 0;
 
-    private float cruiseTimer = 0;  
+    private float cruiseTimer = 0;
 
     private Vector3 targetRotation = Vector3.zero;
     private Vector3 angleDrift = new Vector3(1f, 1f, 0);
@@ -53,7 +53,7 @@ public class watch : MonoBehaviour
 
         if (cruiseTimer > 1)
         {
-            leftStick *= 2.5f + 1.5f * Mathf.Sin(3*(cruiseTimer - 1 + Mathf.PI));
+            leftStick *= 2.5f + 1.5f * Mathf.Sin(3 * (cruiseTimer - 1 + Mathf.PI));
         }
 
         rb.AddForce(transform.right * leftStick.x * Time.deltaTime * forceMultiplier);
@@ -62,32 +62,32 @@ public class watch : MonoBehaviour
         //rb.AddForce(transform.right * Input.GetAxis("HorizontalL") * Time.deltaTime * forceMultiplier);
         //rb.AddForce(transform.forward * Input.GetAxis("VerticalL")* Time.deltaTime * forceMultiplier);
 
-        
 
-        if (Input.GetAxis("Jump")==1 && canDash)
+
+        if (Input.GetAxis("Jump") == 1 && canDash)
         {
             canDash = false;
             dashTimer = 1;
             Debug.Log("Jump");
-           rb.AddForce(transform.forward * dashSpeed, ForceMode.Acceleration);
+            rb.AddForce(transform.forward * dashSpeed, ForceMode.Acceleration);
         }
         dashTimer -= Time.deltaTime;
         if (dashTimer < 0)
         {
-            canDash=true;
+            canDash = true;
         }
     }
 
-    private void Watch() 
+    private void Watch()
     {
-        Vector3 mouseDelta = new Vector3(-1 * Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"),0);
-        Vector3 rStick = new Vector3(-1 * Input.GetAxis("rStickY")/3.5f, Input.GetAxis("rStickX")/3.5f, 0);
+        Vector3 mouseDelta = new Vector3(-1 * Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
+        Vector3 rStick = new Vector3(-1 * Input.GetAxis("rStickY") / 3.5f, Input.GetAxis("rStickX") / 3.5f, 0);
 
         //Debug.Log(rStick);
 
         targetRotation += mouseDelta * Time.deltaTime * 3 * watchSpeed;
 
-        if (rStick.magnitude>0.1f)
+        if (rStick.magnitude > 0.1f)
         {
             targetRotation += rStick * Time.deltaTime * watchSpeed;
         }
@@ -95,7 +95,7 @@ public class watch : MonoBehaviour
         {
             targetRotation += angleDrift * Time.deltaTime;
         }
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(targetRotation),1.5f * Time.deltaTime) ;  
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(targetRotation), 1.5f * Time.deltaTime);
     }
 
     private void Zoom()
