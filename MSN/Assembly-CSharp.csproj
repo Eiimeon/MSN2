@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CreatresMove.cs" />
     <Compile Include="Assets\Scripts\watch.cs" />
+    <Compile Include="Assets\Scan.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\S_Caustics.shader" />

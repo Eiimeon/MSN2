@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class watch : MonoBehaviour
 {
 
     public Rigidbody rb;
     public Camera cam;
-    public GameObject camOverlay;
+    public Image camOverlay;
 
     // Bool?ens
     private bool canWatch = true;
@@ -32,7 +33,7 @@ public class watch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camOverlay.SetActive(false);
+        camOverlay.enabled = false;
     }
 
     public void Swim()
@@ -103,12 +104,12 @@ public class watch : MonoBehaviour
         if (Input.GetAxis("Fire1") == 1)
         {
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, 60, zoomSpeed * Time.deltaTime);
-            camOverlay.SetActive(true);
+            camOverlay.enabled = true;
         }
         else
         {
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, 100, zoomSpeed * Time.deltaTime);
-            camOverlay.SetActive(false);
+            camOverlay.enabled = false;
         }
     }
 
