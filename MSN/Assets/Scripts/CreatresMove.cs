@@ -106,12 +106,26 @@ public class CreatresMove : MonoBehaviour
         transform.position = targetPosition;
     }
 
+    private void AlgaeMove()
+    {
+        targetPosition.x = baseX + radius * Mathf.Cos(frequency * Time.time);
+        targetPosition.y = baseY;
+        targetPosition.z = baseZ + radius * Mathf.Sin(frequency * Time.time);
+        transform.position = targetPosition;
+
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, rotationSpeed * Time.time, transform.rotation.eulerAngles.z);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (name[0] == 'V')
         {
             VirusMove();
+        }
+        if (name[0] == 'A')
+        {
+            AlgaeMove();
         }
         if (name[0] == 'B')
         {

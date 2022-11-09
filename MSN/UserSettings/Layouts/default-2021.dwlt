@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 189
+  controlID: 120
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 190
+  controlID: 19
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 191
+  controlID: 20
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 225
     height: 716
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -402,9 +402,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 40690000
-      m_LastClickedID: 26944
-      m_ExpandedIDs: eaeaffff04fbffff2e69000066690000d6690000166a0000266a0000
+      m_SelectedIDs: fa6c0000607000002e6e0000486d0000946a00008a6f0000f46f000096700000826f00007c6a000024690000206c0000826e0000f868000044700000366f0000386a00000c700000ec6f0000a86e0000e66b0000286b00004e6e0000a26d00009c680000d06a00007a6f0000206b0000d86a0000506a0000f06d0000c06e0000d26f00006e6c00003e690000d8680000c2700000546d0000aa6f0000186e00009a6f0000c06b0000466f000078700000f86b0000c26f00008a6e0000106b0000b26d00008c6a0000e06800002c690000e06a00009c6a0000e66e0000786b00003e6f00001e6f00000e6f0000cc6900008e700000dc69000004710000666c0000d46e0000386c0000186c0000626a0000a26f0000c26800003e6e000090710000ae6b0000966b0000486a0000986e00002a700000a6680000486c0000926d0000a26c0000b4690000aa710000de6e0000e86800007c7100009a6d0000c06a0000926f0000306c0000406c00005a6a0000b26f0000dc710000206a0000306b0000006900005a690000706d000032700000626e0000e4710000186900007471000046690000ee6c0000306a0000666f0000606b0000346d000014700000fe6e000068700000e06d0000c26d0000506b0000286c0000766c0000466e0000106a0000566f0000a2710000b26c0000106c0000406a00009e6b0000826c0000b2680000ee6e0000e4690000d27000007a6e0000b07000008a69000034690000286a0000006e0000e86d0000126d0000867000001a6d0000f86d000010710000ca700000986900003a700000a46a0000186a00004c700000f06a0000a06e0000086c000062690000366e00006c7100005e6f0000ba680000ac6a00008a6c0000aa6c0000066f00009a6c0000de6c00000a6d0000fc700000746a0000006b000064710000026d0000de6b0000006c00008e6b0000b86e0000166f000028710000da6f00009a710000386b0000d26c00006c6a000038710000cc680000ea700000b2710000fc6f0000ec710000006a000050710000c86b0000f4690000086b0000786d0000e66c0000da700000e86a0000186b0000cc710000f66e0000086900008a6d0000a0690000e2700000706b0000047000006a6e0000d46900002c6d00002e6f00005c710000506c0000f86a0000406d00005c6c0000d86d0000e26f0000a8690000706f000000720000586b00004e6f0000a66b0000406b0000f0680000726e000030710000f4710000aa6d0000ca6d0000ca6f0000086e0000526900006a69000090680000b06e000084710000b86a0000846a0000d47100007e69000010690000
+      m_LastClickedID: 26896
+      m_ExpandedIDs: 06fbffffd068000082690000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -537,7 +537,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -653,9 +653,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.643929, y: -12.689152, z: 61.03482}
+    m_Target: {x: 140.88583, y: -20.583405, z: 59.09507}
     speed: 2
-    m_Value: {x: 12.643929, y: -12.689152, z: 61.03482}
+    m_Value: {x: 140.88583, y: -20.583405, z: 59.09507}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -689,7 +689,7 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 16, y: 16}
+      m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
         m_Target: 0
@@ -702,13 +702,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.078725144, y: -0.92172956, z: 0.2762625, w: 0.26124147}
+    m_Target: {x: -0.05594267, y: -0.94141173, z: 0.19562982, w: -0.26905787}
     speed: 2
-    m_Value: {x: 0.07871133, y: -0.92156786, z: 0.27621403, w: 0.26119563}
+    m_Value: {x: -0.057443548, y: -0.938673, z: 0.1921245, w: -0.28050187}
   m_Size:
-    m_Target: 13.409128
+    m_Target: 180.38762
     speed: 2
-    m_Value: 13.409128
+    m_Value: 180.38762
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1009,22 +1009,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Materials 1
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Materials 1
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: "C:\\Users\\jboxy\\Desktop\\ETPA\\Deuxi\xE8me ann\xE9e\\Prog\\MSN2\\MSN2\\MSN"
+  m_LastProjectPath: C:\Users\game2\Documents\MSN2\MSN
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 326d0000
-    m_LastClickedID: 27954
-    m_ExpandedIDs: 000000008a6b0000266d000000ca9a3b
+    scrollPos: {x: 0, y: 70}
+    m_SelectedIDs: 2c760000
+    m_LastClickedID: 30252
+    m_ExpandedIDs: 000000008a74000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1052,7 +1052,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008a6b0000
+    m_ExpandedIDs: 000000008a740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c262c1329a02fa49b5cb4c297106f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 133, y: 30}
+  m_MinSize: {x: 129, y: 28}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: ProBuilder
