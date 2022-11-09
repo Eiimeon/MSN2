@@ -10,6 +10,8 @@ public class watch : MonoBehaviour
     public Rigidbody rb;
     public Camera cam;
     public Image camOverlay;
+    public AudioSource SFX_Swim;
+    private bool canPlaySFW_Swim = true;
 
     // Bool?ens
     private bool canWatch = true;
@@ -25,7 +27,7 @@ public class watch : MonoBehaviour
 
     private float cruiseTimer = 0;
 
-    private Vector3 targetRotation = Vector3.zero;
+    private Vector3 targetRotation;
     private Vector3 angleDrift = new Vector3(1f, 1f, 0);
 
     private Quaternion stableRotation;
@@ -34,6 +36,8 @@ public class watch : MonoBehaviour
     void Start()
     {
         camOverlay.enabled = false;
+        targetRotation = transform.position;
+        targetRotation = transform.rotation.eulerAngles;
     }
 
     public void Swim()
@@ -54,7 +58,14 @@ public class watch : MonoBehaviour
 
         if (cruiseTimer > 1)
         {
-            leftStick *= 2.5f + 1.5f * Mathf.Sin(3 * (cruiseTimer - 1 + Mathf.PI));
+            leftStick *= 2.5f + 1.5f * Mathf.Sin(3 * (cruiseTimer - 1 + Mathf.PI/2));
+            //Mathf.Abs(Mathf.Sin(3 * (cruiseTimer - 1 + Mathf.PI/2))) < 0.1f
+            if (Mathf.Sin(3 * (cruiseTimer - 1)) > 0.9f && canPlaySFW_Swim)
+            {
+                Debug.Log("Swim Sound");
+                SFX_Swim_Delay();
+                SFX_Swim.Play();
+            }
         }
 
         rb.AddForce(transform.right * leftStick.x * Time.deltaTime * forceMultiplier);
@@ -77,6 +88,13 @@ public class watch : MonoBehaviour
         {
             canDash = true;
         }
+    }
+
+    IEnumerator SFX_Swim_Delay()
+    {
+        canPlaySFW_Swim = false;
+        yield return new WaitForSeconds(1f);
+        canPlaySFW_Swim = true;
     }
 
     private void Watch()
