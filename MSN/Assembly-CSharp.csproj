@@ -56,10 +56,10 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\CreatresMove.cs" />
     <Compile Include="Assets\Scripts\Scan.cs" />
     <Compile Include="Assets\Scripts\watch.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\S_Caustics.shader" />

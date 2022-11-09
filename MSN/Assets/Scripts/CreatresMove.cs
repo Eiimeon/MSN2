@@ -86,7 +86,7 @@ public class CreatresMove : MonoBehaviour
             Debug.Log(isGoingForward);
         }
         //Debug.Log("VirusMove");
-        Debug.Log(speed * direction);
+        //Debug.Log(speed * direction);
         if (isGoingForward)
         {
             transform.position += speed * Time.deltaTime * direction + amplitude * Mathf.Sin(frequency * Time.time) * Vector3.up;
