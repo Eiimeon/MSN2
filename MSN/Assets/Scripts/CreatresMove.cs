@@ -25,6 +25,8 @@ public class CreatresMove : MonoBehaviour
     public float duration = Mathf.PI;
     public float internalTimer = 0;
     public float radius = 20;
+    public Vector3 startPos;
+    public Vector3 endPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +108,14 @@ public class CreatresMove : MonoBehaviour
         transform.position = targetPosition;
     }
 
+    private void TardigradeMove()
+    {
+        internalTimer += Time.deltaTime;
+        internalTimer = internalTimer % duration;
+        //Debug.Log(1 - internalTimer / duration);
+        transform.position = internalTimer / duration * endPos + (1 - internalTimer / duration) * startPos;
+    }
+
     private void AlgaeMove()
     {
         targetPosition.x = baseX + radius * Mathf.Cos(frequency * Time.time);
@@ -134,6 +144,10 @@ public class CreatresMove : MonoBehaviour
         if (name[0] == 'C')
         {
             CellMove();
+        }
+        if (name[0] == 'T')
+        {
+            TardigradeMove();
         }
     }
 }
