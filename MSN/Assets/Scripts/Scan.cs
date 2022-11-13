@@ -25,6 +25,8 @@ public class Scan : MonoBehaviour
     public Image hLog3;
     public Image hLog4;
 
+    private bool[] logsFlags = {false};
+
     //private Image[] logs = new ArrayList( bLog, cLog, vLog);
 
     private Collider currentlyWatchedCollider;

@@ -139,6 +139,7 @@ public class watch : MonoBehaviour
             stableRotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
             transform.rotation = Quaternion.Lerp(transform.rotation, stableRotation, straightenSpeed * Time.deltaTime);
             targetRotation = transform.rotation.eulerAngles;
+            //transform.rotation = Quaternion.Euler(20, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
         }
         else
         {
