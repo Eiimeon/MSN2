@@ -62,7 +62,7 @@ public class watch : MonoBehaviour
             //Mathf.Abs(Mathf.Sin(3 * (cruiseTimer - 1 + Mathf.PI/2))) < 0.1f
             if (Mathf.Sin(3 * (cruiseTimer - 1)) > 0.9f && canPlaySFW_Swim)
             {
-                Debug.Log("Swim Sound");
+                //Debug.Log("Swim Sound");
                 SFX_Swim_Delay();
                 SFX_Swim.Play();
             }
