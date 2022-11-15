@@ -73,12 +73,10 @@ namespace UnityEngine.Rendering
             {
                 if (m_InternalProfile == null)
                 {
-                    m_InternalProfile = ScriptableObject.CreateInstance<VolumeProfile>();                    
+                    m_InternalProfile = ScriptableObject.CreateInstance<VolumeProfile>();
 
                     if (sharedProfile != null)
                     {
-						m_InternalProfile.name = sharedProfile.name;
-						
                         foreach (var item in sharedProfile.components)
                         {
                             var itemCopy = Instantiate(item);
